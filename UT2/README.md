@@ -13,7 +13,7 @@
 
 | Equipo | Hostname | MAC | Dirección IP | Cómo la obtiene |
 |---|---|---|---|---|
-| Router pfSense (LAN) | — | | 192.168.xx.1 | Manual |
+| Router pfSense (LAN) | — | | 192.168.3.1 | Manual |
 | Servidor DHCP | dhcp-<nombre> | | 192.168.xx.2 | Manual (fija) |
 | Equipo de dirección (Windows) | win-<nombre> | | | |
 | Puesto de trabajo (Linux) | lin-<nombre> | | | |
