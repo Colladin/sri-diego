@@ -29,7 +29,7 @@
 
 ![E1](evidencias/E1.png)
 
-**Qué demuestra:** <una frase>
+**Qué demuestra:** En esta captura encontramos arriba a la izquierda el hostname de la maquina que es llama dhcp-diego, arriba podemos ver que el servidor kea esta activo y funcionando y debajo podemos ver la ip configurada.
 
 ## 2. Configuración básica · CE 2.d
 
