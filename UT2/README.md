@@ -13,17 +13,17 @@
 
 | Equipo | Hostname | MAC | Dirección IP | Cómo la obtiene |
 |---|---|---|---|---|
-| Router pfSense (LAN) | — | | 192.168.3.1 | Manual |
+| Router pfSense (LAN) | pfsense-diego| fe80::20c:29ff:fe13:cf90 | 192.168.3.1 | Manual |
 | Servidor DHCP | dhcp-diego | fe80::20c:29ff:febc:4c4a/64| 192.168.3.2 | Manual (fija) |
 | Equipo de dirección (Windows) | win-diego | 00:0C:29:51:0D:75 |192.168.3.100| Ip reservada|
 | Puesto de trabajo (Linux) | lin-diego | fe80::20c:29ff:fe0c:83c7/64 | 192.168.3.40| Ip dinámica| 
 
 | Parámetro | Valor |
 |---|---|
-| Pools | |
-| Exclusión | |
-| Concesión / T1 / T2 (s) | |
-| DNS del equipo de dirección | |
+| Pools | .40 - .140|
+| Exclusión | .80 - .85|
+| Concesión / T1 / T2 (s) | 5400|
+| DNS del equipo de dirección | 8.8.8.8|
 
 ## 1. Instalación del servidor · CE 2.c
 
