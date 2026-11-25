@@ -37,15 +37,15 @@ La configuración completa está en [kea/kea-dhcp4.conf](kea/kea-dhcp4.conf).
 
 ![E2](evidencias/E2.png)
 
-**Qué demuestra:** <una frase>
+**Qué demuestra:** En esta captura se demuestra que el servidor kea esta activo y funcionando.
 
 ![E3](evidencias/E3.png)
 
-**Qué demuestra:** <una frase>
+**Qué demuestra:** En esta captura podemos ver que el hostname de la maquina es lin-diego, que la ip esta dentro de la pool y que se llama ens33.
 
 ![E4](evidencias/E4.png)
 
-**Qué demuestra:** <una frase>
+**Qué demuestra:** En esta captura se puede ver que el servidor que responde es el kea que esta funcionando.
 
 ## 3. Asignaciones dinámicas y estáticas · CE 2.e
 
