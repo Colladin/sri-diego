@@ -1,4 +1,4 @@
-# UT2 · Servicio DHCP de <Empresa de tu ficha>
+ip b# UT2 · Servicio DHCP de <Empresa de tu ficha>
 
 | Dato | Valor |
 |---|---|
@@ -16,7 +16,7 @@
 | Router pfSense (LAN) | — | | 192.168.3.1 | Manual |
 | Servidor DHCP | dhcp-diego | | 192.168.3.2 | Manual (fija) |
 | Equipo de dirección (Windows) | win-diego | |192.168.3.100| Manual|
-| Puesto de trabajo (Linux) | lin-diego | | 192.168.3.40| Manual|
+| Puesto de trabajo (Linux) | lin-diego | | 192.168.3.40| Manual| 
 
 | Parámetro | Valor |
 |---|---|
