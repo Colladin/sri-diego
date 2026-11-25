@@ -15,7 +15,7 @@
 |---|---|---|---|---|
 | Router pfSense (LAN) | — | | 192.168.3.1 | Manual |
 | Servidor DHCP | dhcp-<nombre> | | 192.168.xx.2 | Manual (fija) |
-| Equipo de dirección (Windows) | win-<nombre> | | | |
+| Equipo de dirección (Windows) | win-<nombre> | |192.168.3.100| Manual|
 | Puesto de trabajo (Linux) | lin-<nombre> | | | |
 
 | Parámetro | Valor |
