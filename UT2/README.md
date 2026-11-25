@@ -106,4 +106,4 @@ Se comprueban en `kea-dhcp4.conf` (con el comentario junto a la reserva), E4 y E
 
 | Herramienta | Para qué la usé | Qué comprobé o corregí yo |
 |---|---|---|
-| | | |
+| Cloude | Para corregir errores que me salian en las configuraciones | Cuando me salia el kea inactivo|
