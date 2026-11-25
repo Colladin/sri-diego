@@ -14,9 +14,9 @@
 | Equipo | Hostname | MAC | Dirección IP | Cómo la obtiene |
 |---|---|---|---|---|
 | Router pfSense (LAN) | — | | 192.168.3.1 | Manual |
-| Servidor DHCP | dhcp-<diego> | | 192.168.xx.2 | Manual (fija) |
-| Equipo de dirección (Windows) | win-<diego> | |192.168.3.100| Manual|
-| Puesto de trabajo (Linux) | lin-<diego> | | | |
+| Servidor DHCP | dhcp-diego | | 192.168.xx.2 | Manual (fija) |
+| Equipo de dirección (Windows) | win-diego | |192.168.3.100| Manual|
+| Puesto de trabajo (Linux) | lin-diego | | 192.168.3.40| Manual|
 
 | Parámetro | Valor |
 |---|---|
