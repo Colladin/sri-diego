@@ -51,11 +51,11 @@ La configuración completa está en [kea/kea-dhcp4.conf](kea/kea-dhcp4.conf).
 
 ![E5](evidencias/E5.png)
 
-**Qué demuestra:** <una frase>
+**Qué demuestra:** En esta captura se demuestra que el equipo Windows recibió la ip reservada del Kea. También podemos ver que el hostname esta cambiado.
 
 ![E6](evidencias/E6.png)
 
-**Qué demuestra:** <una frase>
+**Qué demuestra:** En esta captura podemos ver el que el Kea ha registrado las concesiones por parte del leases4.csv y del jorunal con el lease_alloc
 
 ## 4. Opciones adicionales · CE 2.f
 
@@ -65,11 +65,11 @@ Se comprueban en `kea-dhcp4.conf` (con el comentario junto a la reserva), E4 y E
 
 ![E7](evidencias/E7.png)
 
-**Qué demuestra:** <una frase>
+**Qué demuestra:** Esta captura demuestra el intercambio completo con la MAC de Windows y la del servidor.
 
 | Mensaje | IP origen | MAC origen | IP destino | MAC destino | Difusión o unicast |
 |---|---|---|---|---|---|
-| DISCOVER | | | | | |
+| DISCOVER || 0.0.0.0| 00:0c29:51:0d:75| 255.255.255.255| ff:ff:ff:ff:ff|
 | OFFER | | | | | |
 | REQUEST | | | | | |
 | ACK | | | | | |
@@ -98,7 +98,7 @@ Se comprueban en `kea-dhcp4.conf` (con el comentario junto a la reserva), E4 y E
 
 ![E8](evidencias/E8.png)
 
-**Qué demuestra:** <una frase>
+**Qué demuestra:** Esta captura demuestra que el Kea ha sido detenido y que si no hay servidor DHCP el equipo se configura solo.
 
 ## 7. Uso de IA
 
