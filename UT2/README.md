@@ -69,40 +69,39 @@ Se comprueban en `kea-dhcp4.conf` (con el comentario junto a la reserva), E4 y E
 
 | Mensaje | IP origen | MAC origen | IP destino | MAC destino | Difusión o unicast |
 |---|---|---|---|---|---|
-| DISCOVER || 0.0.0.0| 00:0c29:51:0d:75| 255.255.255.255| ff:ff:ff:ff:ff|
-| OFFER | | | | | |
-| REQUEST | | | | | |
-| ACK | | | | | |
+| DISCOVER | 0.0.0.0| 00:0c:29:51:0d:75| 255.255.255.255| ff:ff:ff:ff:ff| Difusión|
+| OFFER | 192.168.3.2| 00:0c:29:bc:4c:4a| 192.168.3.15| 00:0c:29:51:0d:75| Unicast|
+| REQUEST | 0.0.0.0| 00:0c:29:51:0d:75| 255.255.255.255| ff:ff:ff:ff:ff:ff| Difusión|
+| ACK | 192.168.3.2| 00:0c:29:bc:4c:4a| 192.168.3.15 | 00:0c:29:51:0d:75| Unicast|
 
-- **xid:**
-- **Identificador del servidor:**
+- **xid:** 0xe348fc09
+- **Identificador del servidor:** 192.168.3.2
 
 **Renovación y caducidad** (con tus tiempos, 3 o 4 líneas):
+La concesión dura 5400 segundos, es decir, 90 minutos. Cuando llega a la mitad, la máquina Windows pide renovar solo con el request. Si el servidor no contesta, el cliente a los 79 minutos difundirá la petición anterior a todos los servidores DHCP para poder renovar con cualquiera y si pasa de los 80 minutos la concesión caduca y el cliente empieza de 0 con el DISCOVER.
 
 ## 6. Informe para la empresa · CE 2.a
 
 **Tres ventajas para <empresa>:**
 
-1.
-2.
-3.
+1. El fin de las IPs duplicadas: El kea reparte cada dirección una sola vez y lleva el registro de todas las concesiones.
+2. Cambiar la mesa sin quedarse sin red: Al conectar el equipo en otro puesto recibe la ip automáticamente sin necesitar a alguien de soporte
+3. Visitantes conectados sin configurar: Clientes y proveedores obtienen una ip al conectarse sin que nadie les tenga que dar datos de red.
 
 | Mecanismo | Cómo obtiene el equipo su IP | Qué equipo de la oficina lo usa (en APIPA, cuándo aparece) |
 |---|---|---|
-| Configuración manual | | |
-| DHCP dinámica | | |
-| Reserva DHCP | | |
-| APIPA (169.254.x.x) | | |
+| Configuración manual | La escribe el administrador en el propio equipo| pfSense (192.168.3.1) y dhcp-diego (192.168.3.2)|
+| DHCP dinámica | Kea le presta una IP de los pools (.40-.79 y .86-.140) durante 5400 s| lin-diego y los equipos de los visitantes|
+| Reserva DHCP | Kea le entrega siempre la misma IP, identificándolo por su MAC| win-diego (192.168.3.15)|
+| APIPA (169.254.x.x) | El propio equipo se asigna una IP del rango 169.254.0.0/16| win-diego con Kea detenido (169.254.95.143)|
 
-**Por qué el router y el servidor DHCP no usan DHCP:**
+**Por qué el router y el servidor DHCP no usan DHCP:** El servidor DHCP es quien reparte las direcciones, así que no puede pedírsela a sí mismo, y necesita una IP fija y conocida para que los clientes lo localicen y para que Kea pueda escuchar siempre en esa dirección.
 
 ![E8](evidencias/E8.png)
 
 **Qué demuestra:** Esta captura demuestra que el Kea ha sido detenido y que si no hay servidor DHCP el equipo se configura solo.
 
 ## 7. Uso de IA
-
-- [ ] No he usado IA en esta tarea.
 
 | Herramienta | Para qué la usé | Qué comprobé o corregí yo |
 |---|---|---|
